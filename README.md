@@ -28,7 +28,7 @@ The SEL image is available [here](https://hub.docker.com/r/selcolumbia/osm-gridm
 
 5.  Run the tilemill service via `docker-compose up tilemill` 
 
-6.  Using the url of the server setup in step 2, navigate your browser to http://<server-url>:20009 to manage tilemill
+6.  Using the url of the server setup in step 2, navigate your browser to http://\<server-url>:20009 to manage tilemill
 
 7.  Configure a project in tilemill and add layers from the postgis database.  The following files in this repository can be used as a guide:
 
@@ -40,4 +40,4 @@ The SEL image is available [here](https://hub.docker.com/r/selcolumbia/osm-gridm
     An "oync-default" project should be available for testing.
 
 8.  Reference the tile server and project for your site via a map tile rendering client (e.g. [leaflet](http://leafletjs.com/) )  
-    The tile server url will be of the form:  http://<server-url>:20008/tile/<tilemill-project-name>/{z}/{x}/{y}.png
+    The tile server url will be of the form:  http://\<server-url>:20008/tile/<tilemill-project-name>/{z}/{x}/{y}.png
