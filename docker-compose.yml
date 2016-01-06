@@ -3,17 +3,19 @@ tilemill:
     links:
       - "oync:oync"
       - "db:db"
+    volumes:
+      - ./project/oync-default:/root/Documents/MapBox/project/oync-default
     ports:
       - "20009:20009" 
       - "20008:20008" 
-    command:  ./tilemill/run-tilemill.sh
+    command:  /tilemill/run-tilemill.sh
 
 oync:
     image: "selcolumbia/oync"
     links:
       - "db:db"
     environment:
-        OYNC_OSM_API_URL: 'http://159.203.95.2'
+        OYNC_OSM_API_URL: 'http://<your-osm-website-url>'
     command:  ./bin/run-oync.sh
 
 db:

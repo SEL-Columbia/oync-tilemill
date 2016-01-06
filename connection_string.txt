@@ -1,0 +1,1 @@
+dbname=osm host=db user=postgres
