@@ -40,4 +40,4 @@ The SEL image is available [here](https://hub.docker.com/r/selcolumbia/osm-gridm
     An "oync-default" project should be available for testing.
 
 8.  Reference the tile server and project for your site via a map tile rendering client (e.g. [leaflet](http://leafletjs.com/) )  
-    The tile server url will be of the form:  http://\<server-url>:20008/tile/<tilemill-project-name>/{z}/{x}/{y}.png
+    The tile server url will be of the form:  http://\<server-url>:20008/tile/\<tilemill-project-name>/{z}/{x}/{y}.png
