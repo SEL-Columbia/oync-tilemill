@@ -20,19 +20,19 @@ To run your own instance of oync-tilemill, do the following:
 There are several docker images available for this on [docker hub](hub.docker.com).  
 The SEL image is available [here](https://hub.docker.com/r/selcolumbia/osm-gridmaps-cgimap) with setup instructions [here](https://github.com/SEL-Columbia/osm-devops)
 
-2.  Setup a server to deploy oync-tilemill and [install docker and docker compose](https://docs.docker.com/engine/installation/).
+2.  Setup a server to deploy oync-tilemill and [install docker and docker compose](https://docs.docker.com/engine/installation/).  (we recommend setting up your server with key-based, no password authentication)
 
 3.  Clone this repository on that machine.
 
 4.  Edit docker-compose.yml to specify the `OYNC_OSM_API_URL` as the base url of the server you setup in step 1.
 
-5.  Run the tilemill service via `docker-compose up tilemill` 
+5.  Run the tilemill service via `docker-compose up tilemill` (be patient, the 3 images may take a while to pull/extract)
 
 6.  Using the url of the server setup in step 2, navigate your browser to http://\<server-url>:20009 to manage tilemill
 
 7.  Configure a project in tilemill and add layers from the postgis database.  The following files in this repository can be used as a guide:
 
-	- connection_string.txt:  connects to the db which is synchronized with osm
+    - connection_string.txt:  connects to the db which is synchronized with osm
     - style.mss:  default styling for points and lines
     - points.sql:  default sql to retrieve point data
     - lines.sql:  default sql to retrieve line data
