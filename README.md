@@ -22,11 +22,14 @@ The SEL image is available [here](https://hub.docker.com/r/selcolumbia/osm-gridm
 
 2.  Setup a server to deploy oync-tilemill and [install docker and docker compose](https://docs.docker.com/engine/installation/).  
     We recommend setting up your server with key-based, "no password" authentication.
-    Minimum required RAM:  2GB
+    Minimum required RAM:  4GB
 
 3.  Clone this repository on that machine.
 
-4.  Edit docker-compose.yml to specify the `OYNC_OSM_API_URL` as the base url of the server you setup in step 1.
+4.  Edit docker-compose.yml to specify the following environment variables:
+
+    - `TILEMILL_HOST` (under the tilemill service):  The url of the host machine that users will browse to 
+    - `OYNC_OSM_API_URL` (under the oync service):  The base url of the server you setup in step 1 to pull data from
 
 5.  Run the tilemill service via `docker-compose up tilemill` (be patient, the 3 images may take a while to pull/extract)
 
