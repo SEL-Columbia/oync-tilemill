@@ -8,6 +8,8 @@ tilemill:
     ports:
       - "20009:20009" 
       - "20008:20008" 
+    environment:
+        TILEMILL_HOST: 'localhost'
     command:  /tilemill/run-tilemill.sh
 
 oync:
@@ -15,7 +17,7 @@ oync:
     links:
       - "db:db"
     environment:
-        OYNC_OSM_API_URL: 'http://<your-osm-website-url>'
+        OYNC_OSM_API_URL: 'http://kaduna.gridmaps.org'
     command:  ./bin/run-oync.sh
 
 db:
