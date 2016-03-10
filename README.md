@@ -21,7 +21,7 @@ There are several docker images available for this on [docker hub](hub.docker.co
 The SEL image is available [here](https://hub.docker.com/r/selcolumbia/osm-gridmaps-cgimap) with setup instructions [here](https://github.com/SEL-Columbia/osm-devops)
 
 2.  Setup a server to deploy oync-tilemill and [install docker and docker compose](https://docs.docker.com/engine/installation/).  
-    We recommend setting up your server with key-based, "no password" authentication.
+    We recommend setting up your server with key-based, "no password" authentication (modify ```/etc/ssh/sshd_config``` to set ```PasswordAuthentication``` and ```UsePam``` to ```no```).
     Minimum required RAM:  4GB
 
 3.  Clone this repository on that machine.
