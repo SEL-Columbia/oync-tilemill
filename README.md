@@ -28,8 +28,12 @@ The SEL image is available [here](https://hub.docker.com/r/selcolumbia/osm-gridm
 
 4.  Edit docker-compose.yml to specify the following environment variables:
 
-    - `TILEMILL_HOST` (under the tilemill service):  The url of the host machine that users will browse to 
-    - `OYNC_OSM_API_URL` (under the oync service):  The base url of the server you setup in step 1 to pull data from
+    - `TILEMILL_HOST` (under the tilemill service):  
+        The url of the host machine that users will browse to.
+        This should NOT contain the `http://` prefix (e.g. 'mytilemillserver.org')
+    - `OYNC_OSM_API_URL` (under the oync service):  
+        The base url of the server you setup in step 1 to pull data from.
+        This SHOULD contain the `http://` prefix (e.g. 'http://myosmserver.org')
 
 5.  Run the tilemill service via `docker-compose up tilemill` (be patient, the 3 images may take a while to pull/extract)
 
