@@ -17,7 +17,7 @@ oync:
     links:
       - "db:db"
     environment:
-        OYNC_OSM_API_URL: 'http://kaduna.gridmaps.org'
+        OYNC_OSM_API_URL: 'localhost'
     command:  ./bin/run-oync.sh
 
 db:
